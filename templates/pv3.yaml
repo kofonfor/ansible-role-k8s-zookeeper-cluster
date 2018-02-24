@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: zookeeper-data-3
+  labels:
+    type: local
+spec:
+  storageClassName: zookeeper
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/pvs/zookeeper-cluster-pv-3"
